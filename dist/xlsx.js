@@ -11854,7 +11854,7 @@ function readFileSync(data, opts) {
 }
 function write_zip_type(wb, opts) {
 	var o = opts||{};
-  style_builder  = new StyleBuilder(opts);
+  var style_builder  = new StyleBuilder(opts);
 
   var z = write_zip(wb, o);
 	switch(o.type) {
@@ -12151,7 +12151,8 @@ var XmlNode = (function () {
     return this;
   }
 
-  var APOS = "'"; QUOTE = '"'
+  var APOS = "'";
+  var QUOTE = '"'
   var ESCAPED_QUOTE = {  }
   ESCAPED_QUOTE[QUOTE] = '&quot;'
   ESCAPED_QUOTE[APOS] = '&apos;'
@@ -12230,8 +12231,8 @@ var XmlNode = (function () {
 
 
     // cache style specs to avoid excessive duplication
-    _hashIndex = {};
-    _listIndex = [];
+    var _hashIndex = {};
+    var _listIndex = [];
 
     return {
 
